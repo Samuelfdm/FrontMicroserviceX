@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://storagex01.s3.us-east-1.amazonaws.com/FrontMicroserviceX/styles.css">
 </head>
 <body>
     <div class="container">
         <h2 id="formTitle">Iniciar Sesión</h2>
-        <form id="authForm">
-            <label>Correo Electrónico:<input type="email" id="email" required></label>
-            <label>Contraseña:<input type="password" id="password" required></label>
+        
+        <!-- Formulario de Inicio de Sesión -->
+        <form id="loginForm">
+            <label>Correo Electrónico:<input type="email" id="loginEmail" required></label>
+            <label>Contraseña:<input type="password" id="loginPassword" required></label>
             <button type="submit">Iniciar Sesión</button>
         </form>
-        <p id="toggleForm">¿No tienes cuenta? <a href="#" onclick="toggleForm()">Regístrate aquí</a></p>
+
+        <!-- Formulario de Registro -->
+        <form id="registerForm" style="display: none;">
+            <label>Nombre:<input type="text" id="registerName" required></label>
+            <label>Correo Electrónico:<input type="email" id="registerEmail" required></label>
+            <label>Contraseña:<input type="password" id="registerPassword" required></label>
+            <button type="submit">Registrarse</button>
+        </form>
+
+        <p id="toggleForm">
+            ¿No tienes cuenta? <a href="#" onclick="toggleForm()">Regístrate aquí</a>
+        </p>
+
+        <p id="message"></p>
     </div>
 
-    <script src="app.js"></script>
+    <script src="https://storagex01.s3.us-east-1.amazonaws.com/FrontMicroserviceX/app.js"></script>
 </body>
 </html>

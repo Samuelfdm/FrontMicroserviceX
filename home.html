@@ -3,44 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microservice App</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://storagex01.s3.us-east-1.amazonaws.com/FrontMicroserviceX/styles.css">
 </head>
 <body>
-    <h1>Microservice App</h1>
 
-    <div class="section">
-        <h2>Crear Stream</h2>
-        <input type="text" id="creator" placeholder="Nombre del creador">
-        <button onclick="createStream()">Crear Stream</button>
+    <!-- Encabezado con botones -->
+    <header>
+        <button id="logoutButton">Cerrar Sesión</button>
+        <button id="createStreamButton">Crear Stream</button>
+    </header>
+
+    <!-- Contenedor de Streams -->
+    <main>
+        <h2>Streams disponibles</h2>
+        <div id="streamsContainer"></div>
+    </main>
+
+    <!-- Sección de Posts (se muestra al seleccionar un Stream) -->
+    <div id="postSection" style="display: none;">
+        <h2>Posts del Stream</h2>
+        <div id="postsContainer"></div>
+        <button id="createPostButton">Crear Post</button>
     </div>
 
-    <div class="section">
-        <h2>Crear Post</h2>
-        <input type="text" id="streamId" placeholder="ID del Stream">
-        <input type="text" id="creatorPost" placeholder="Nombre del usuario">
-        <input type="text" id="content" placeholder="Contenido del post">
-        <button onclick="createPost()">Crear Post</button>
-    </div>
-
-    <div class="section">
-        <h2>Ver Posts de un Stream</h2>
-        <input type="text" id="streamNamePosts" placeholder="ID del Stream">
-        <button onclick="getPosts()">Ver Posts</button>
-        <table id="postsTable">
-            <thead>
-                <tr>
-                    <th>Creador</th>
-                    <th>Contenido</th>
-                    <th>Fecha</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Aquí se llenarán los posts -->
-            </tbody>
-        </table>
-    </div>
-
-    <script src="app.js" defer></script>
+    <script src="https://storagex01.s3.us-east-1.amazonaws.com/FrontMicroserviceX/app.js"></script>
 </body>
 </html>
