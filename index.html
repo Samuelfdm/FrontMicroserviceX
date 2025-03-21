@@ -3,42 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microservice App</title>
+    <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Microservice App</h1>
-
-    <div class="section">
-        <h2>Crear Stream</h2>
-        <input type="text" id="creator" placeholder="Nombre del creador">
-        <button onclick="createStream()">Crear Stream</button>
-    </div>
-
-    <div class="section">
-        <h2>Crear Post</h2>
-        <input type="text" id="streamId" placeholder="ID del Stream">
-        <input type="text" id="creatorPost" placeholder="Nombre del usuario">
-        <input type="text" id="content" placeholder="Contenido del post">
-        <button onclick="createPost()">Crear Post</button>
-    </div>
-
-    <div class="section">
-        <h2>Ver Posts de un Stream</h2>
-        <input type="text" id="streamNamePosts" placeholder="ID del Stream">
-        <button onclick="getPosts()">Ver Posts</button>
-        <table id="postsTable">
-            <thead>
-                <tr>
-                    <th>Creador</th>
-                    <th>Contenido</th>
-                    <th>Fecha</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Aquí se llenarán los posts -->
-            </tbody>
-        </table>
+    <div class="container">
+        <h2 id="formTitle">Iniciar Sesión</h2>
+        <form id="authForm">
+            <label>Correo Electrónico:<input type="email" id="email" required></label>
+            <label>Contraseña:<input type="password" id="password" required></label>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="toggleForm">¿No tienes cuenta? <a href="#" onclick="toggleForm()">Regístrate aquí</a></p>
     </div>
 
     <script src="app.js"></script>
